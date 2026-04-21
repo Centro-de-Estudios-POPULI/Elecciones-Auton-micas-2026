@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Elecciones Autonómicas Bolivia 2026 — Centro de Estudios Populi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--accent:#1d4ed8;--accent2:#2563eb}
+body{font-family:'Inter',system-ui,sans-serif;background:#f8f7f4;color:#374151;line-height:1.5}
+
+/* HEADER */
+.hdr{background:linear-gradient(135deg,#0d1b35 0%,#162b50 60%,#1a3464 100%);padding:0;text-align:center;box-shadow:0 2px 16px rgba(0,0,0,.22)}
+.hdr::before{content:'';display:block;height:5px;background:linear-gradient(90deg,#d52b1e 33.3%,#f4c51e 33.3% 66.6%,#007934 66.6%)}
+.hdr-inner{padding:28px 28px 24px}
+.hdr-badge{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.85);font-size:.6em;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 14px;border-radius:20px;margin-bottom:12px}
+.hdr h1{font-family:'Playfair Display',Georgia,serif;font-size:2em;color:#fff;font-weight:700;margin-bottom:8px;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.hdr-sub{font-size:.8em;color:rgba(255,255,255,.6);letter-spacing:.15px}
+
+/* MAIN */
+.main{max-width:1200px;margin:0 auto;padding:40px 24px 60px}
+
+/* INTRO */
+.intro{background:#fff;border:1px solid #dde2ea;border-radius:14px;padding:24px 28px;margin-bottom:36px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.intro p{font-size:.88em;color:#4b5563;line-height:1.75}
+.intro strong{color:#0f1523}
+
+/* SECCIÓN */
+.sec-title{font-family:'Playfair Display',serif;font-size:1.3em;color:#0f1523;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.sec-sub{font-size:.78em;color:#6b7280;margin-bottom:20px}
+.sec-title span{display:inline-block;width:4px;height:22px;background:var(--accent);border-radius:2px}
+
+/* GRID DE CARDS */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-bottom:40px}
+.card{background:#fff;border:1px solid #dde2ea;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:box-shadow .2s,transform .15s;text-decoration:none;display:flex;flex-direction:column}
+.card:hover{box-shadow:0 4px 20px rgba(0,0,0,.1);transform:translateY(-2px)}
+.card-stripe{height:5px}
+.card-body{padding:16px}
+.card-label{font-size:.58em;color:#9ca3af;text-transform:uppercase;letter-spacing:1.2px;font-weight:700;margin-bottom:4px}
+.card-name{font-size:1em;font-weight:700;color:#0f1523;margin-bottom:3px}
+.card-meta{font-size:.72em;color:#6b7280}
+.card-arrow{margin-top:12px;font-size:.72em;color:var(--accent);font-weight:600}
+
+/* COLORES POR DEPARTAMENTO */
+.c-lap{background:#1d4ed8}.c-cbba{background:#7c3aed}.c-sc{background:#047857}
+.c-pot{background:#b45309}.c-ben{background:#0891b2}.c-tar{background:#be185d}
+.c-chu{background:#dc2626}.c-oru{background:#d97706}.c-pan{background:#15803d}
+.c-nac{background:linear-gradient(90deg,#d52b1e 33%,#f4c51e 33% 66%,#007934 66%)}
+
+/* FOOTER */
+footer{background:linear-gradient(135deg,#0f1523,#111d3a);border-top:3px solid #3b82f6;padding:24px 32px}
+footer p{color:rgba(255,255,255,.4);font-size:.7em;text-align:center}
+footer strong{color:rgba(255,255,255,.7)}
+
+@media(max-width:600px){
+  .hdr h1{font-size:1.4em}
+  .grid{grid-template-columns:1fr 1fr}
+  .main{padding:24px 16px 40px}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-inner">
+    <div class="hdr-badge">Resultados Oficiales</div>
+    <h1>🗳️ Elecciones Autonómicas Bolivia 2026</h1>
+    <div class="hdr-sub">Gobernaciones · Asambleas Legislativas Departamentales · Municipios &nbsp;·&nbsp; 22 de marzo de 2026<br>Fuente: Tribunal Supremo Electoral — Cómputo Oficial 2026</div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="intro">
+    <p>Análisis electoral de las <strong>Elecciones Autonómicas Bolivia 2026</strong>. Cada dashboard incluye resultados por partido,
+    asignación de escaños (territoriales, poblacionales e indígenas), participación ciudadana y análisis de voto cruzado,
+    calculados según la <strong>Ley 1700</strong> y los estatutos autonómicos departamentales vigentes.
+    Elaborado por el <strong>Centro de Estudios de Políticas Públicas para la Libertad</strong> </p>
+  </div>
+
+  <!-- GOBERNACIONES -->
+  <div class="sec-title"><span></span>Gobernaciones &amp; Asambleas Legislativas</div>
+  <div class="sec-sub">Resultados Gobernador/a · Asambleísta Territorial · Asambleísta Poblacional · Composición ALD · Participación · Voto Cruzado</div>
+  <div class="grid">
+    <a class="card" href="gobernaciones/dashboard_la_paz.html">
+      <div class="card-stripe c-lap"></div>
+      <div class="card-body">
+        <div class="card-label">Gobernación</div>
+        <div class="card-name">La Paz</div>
+        <div class="card-meta">45 escaños ALD · 20 provincias</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/dashboard_cochabamba.html">
+      <div class="card-stripe c-cbba"></div>
+      <div class="card-body">
+        <div class="card-label">Gobernación</div>
+        <div class="card-name">Cochabamba</div>
+        <div class="card-meta">34 escaños ALD · 16 provincias</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/dashboard_santa_cruz.html">
+      <div class="card-stripe c-sc"></div>
+      <div class="card-body">
+        <div class="card-label">Gobernación</div>
+        <div class="card-name">Santa Cruz</div>
+        <div class="card-meta">Estatuto Autonómico · 15 provincias</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/dashboard_potosi.html">
+      <div class="card-stripe c-pot"></div>
+      <div class="card-body">
+        <div class="card-label">Gobernación</div>
+        <div class="card-name">Potosí</div>
+        <div class="card-meta">33 escaños ALD · 16 provincias</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/dashboard_beni.html">
+      <div class="card-stripe c-ben"></div>
+      <div class="card-body">
+        <div class="card-label">Gobernación</div>
+        <div class="card-name">Beni</div>
+        <div class="card-meta">Régimen especial · 8 provincias</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/dashboard_tarija.html">
+      <div class="card-stripe c-tar"></div>
+      <div class="card-body">
+        <div class="card-label">Gobernación</div>
+        <div class="card-name">Tarija</div>
+        <div class="card-meta">30 escaños ALD · 6 provincias</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/dashboard_chuquisaca.html">
+      <div class="card-stripe c-chu"></div>
+      <div class="card-body">
+        <div class="card-label">Gobernación</div>
+        <div class="card-name">Chuquisaca</div>
+        <div class="card-meta">25 escaños ALD · 10 provincias</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/dashboard_oruro.html">
+      <div class="card-stripe c-oru"></div>
+      <div class="card-body">
+        <div class="card-label">Gobernación</div>
+        <div class="card-name">Oruro</div>
+        <div class="card-meta">33 escaños ALD · 16 provincias</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/dashboard_pando.html">
+      <div class="card-stripe c-pan"></div>
+      <div class="card-body">
+        <div class="card-label">Gobernación</div>
+        <div class="card-name">Pando</div>
+        <div class="card-meta">Estatuto Autonómico · 5 provincias</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- SEGUNDA VUELTA -->
+  <div class="sec-title"><span></span>Segunda Vuelta — Gobernaciones</div>
+  <div class="sec-sub">Cinco departamentos con ballotage · Resultados definitivos · Gobernador/a electo/a · Participación · Análisis de transferencia de voto</div>
+  <div class="grid">
+    <a class="card" href="gobernaciones/GOB_0907_SantaCruz_2daVuelta.html">
+      <div class="card-stripe c-sc"></div>
+      <div class="card-body">
+        <div class="card-label">2da Vuelta · Gobernación</div>
+        <div class="card-name">Santa Cruz</div>
+        <div class="card-meta">LIBRE 28,6% · SPT 27,0% · 1ra vuelta</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/GOB_0904_Oruro_2daVuelta.html">
+      <div class="card-stripe c-oru"></div>
+      <div class="card-body">
+        <div class="card-label">2da Vuelta · Gobernación</div>
+        <div class="card-name">Oruro</div>
+        <div class="card-meta">JACHA 35,3% · PATRIA-ORURO 11,1% · 1ra vuelta</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/GOB_0906_Tarija_2daVuelta.html">
+      <div class="card-stripe c-tar"></div>
+      <div class="card-body">
+        <div class="card-label">2da Vuelta · Gobernación</div>
+        <div class="card-name">Tarija</div>
+        <div class="card-meta">PATRIA 35,8% · CDC 28,4% · 1ra vuelta</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/GOB_0908_Beni_2daVuelta.html">
+      <div class="card-stripe c-ben"></div>
+      <div class="card-body">
+        <div class="card-label">2da Vuelta · Gobernación</div>
+        <div class="card-name">Beni</div>
+        <div class="card-meta">PATRIA-UNIDOS 36,6% · MNR 20,1% · 1ra vuelta</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="gobernaciones/GOB_0901_Chuquisaca_2daVuelta.html">
+      <div class="card-stripe c-chu"></div>
+      <div class="card-body">
+        <div class="card-label">2da Vuelta · Gobernación</div>
+        <div class="card-name">Chuquisaca</div>
+        <div class="card-meta">AGN 34,7% · PATRIA-UNIDOS 34,0% · 1ra vuelta</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- MUNICIPALES -->
+  <div class="sec-title"><span></span>Elecciones Municipales</div>
+  <div class="sec-sub">Resultados Alcalde/sa · Concejos Municipales · Participación · Scatter representación</div>
+  <div class="grid">
+    <a class="card" href="municipales/dashboard_nacional.html">
+      <div class="card-stripe c-nac"></div>
+      <div class="card-body">
+        <div class="card-label">Resumen nacional</div>
+        <div class="card-name">Bolivia — Nacional</div>
+        <div class="card-meta">Todos los municipios</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="municipales/dashboard_la_paz.html">
+      <div class="card-stripe c-lap"></div>
+      <div class="card-body">
+        <div class="card-label">Municipios</div>
+        <div class="card-name">La Paz</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="municipales/dashboard_cochabamba.html">
+      <div class="card-stripe c-cbba"></div>
+      <div class="card-body">
+        <div class="card-label">Municipios</div>
+        <div class="card-name">Cochabamba</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="municipales/dashboard_santa_cruz.html">
+      <div class="card-stripe c-sc"></div>
+      <div class="card-body">
+        <div class="card-label">Municipios</div>
+        <div class="card-name">Santa Cruz</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="municipales/dashboard_potosi.html">
+      <div class="card-stripe c-pot"></div>
+      <div class="card-body">
+        <div class="card-label">Municipios</div>
+        <div class="card-name">Potosí</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="municipales/dashboard_beni.html">
+      <div class="card-stripe c-ben"></div>
+      <div class="card-body">
+        <div class="card-label">Municipios</div>
+        <div class="card-name">Beni</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="municipales/dashboard_tarija.html">
+      <div class="card-stripe c-tar"></div>
+      <div class="card-body">
+        <div class="card-label">Municipios</div>
+        <div class="card-name">Tarija</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="municipales/dashboard_chuquisaca.html">
+      <div class="card-stripe c-chu"></div>
+      <div class="card-body">
+        <div class="card-label">Municipios</div>
+        <div class="card-name">Chuquisaca</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="municipales/dashboard_oruro.html">
+      <div class="card-stripe c-oru"></div>
+      <div class="card-body">
+        <div class="card-label">Municipios</div>
+        <div class="card-name">Oruro</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+    <a class="card" href="municipales/dashboard_pando.html">
+      <div class="card-stripe c-pan"></div>
+      <div class="card-body">
+        <div class="card-label">Municipios</div>
+        <div class="card-name">Pando</div>
+        <div class="card-arrow">Ver dashboard →</div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <p><strong>Centro de Estudios Populi</strong> · Carlos Aranda; Sofía Wanderley &amp Joaquina Vargas<br>
+  Fuente: Tribunal Supremo Electoral Bolivia — Cómputo Oficial 2026 · Los escaños NPIOC son elegidos por normas y procedimientos propios de cada nación o pueblo indígena originario campesino.</p>
+</footer>
+
+</body>
+</html>
