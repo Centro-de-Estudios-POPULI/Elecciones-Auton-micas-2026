@@ -54,9 +54,13 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f8f7f4;color:#374151;l
 .sec-2v-note{font-size:.75em;color:#6b7280;margin-bottom:20px;font-style:italic}
 
 /* FOOTER */
-footer{background:linear-gradient(135deg,#0f1523,#111d3a);border-top:3px solid #3b82f6;padding:24px 32px}
-footer p{color:rgba(255,255,255,.4);font-size:.7em;text-align:center}
-footer strong{color:rgba(255,255,255,.7)}
+footer{background:linear-gradient(135deg,#0f1523,#111d3a);border-top:3px solid #3b82f6;padding:32px 40px 24px}
+.footer-inner{display:flex;flex-wrap:wrap;gap:24px;max-width:1200px;margin:0 auto 20px}
+.footer-brand{font-family:'Playfair Display',serif;font-size:1.1em;color:#fff;font-weight:700;margin-bottom:4px}
+.footer-tagline{font-size:.72em;color:rgba(255,255,255,.5);line-height:1.8}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:16px;max-width:1200px;margin:0 auto}
+.footer-bottom p{color:rgba(255,255,255,.3);font-size:.65em;text-align:center;line-height:1.7}
+@media(max-width:600px){footer{padding:24px 20px 20px}}
 
 @media(max-width:600px){
   .hdr h1{font-size:1.4em}
@@ -78,10 +82,13 @@ footer strong{color:rgba(255,255,255,.7)}
 <div class="main">
 
   <div class="intro">
-    <p>Análisis electoral de las <strong>Elecciones Subnacionales Bolivia 2026</strong>. Cada dashboard incluye resultados por partido,
-    asignación de escaños (territoriales, poblacionales e indígenas), participación ciudadana y análisis de voto cruzado,
-    calculados según la <strong>Ley 1700</strong> y los estatutos autonómicos departamentales vigentes.
-    Elaborado por <strong>Carlos Aranda &amp; Sofía Wanderley</strong> — Centro de Estudios Populi.</p>
+    <p>Análisis integral de las <strong>Elecciones Subnacionales Bolivia 2026</strong> elaborado por el <strong>Centro de Estudios POPULI</strong>.
+    Los dashboards de gobernaciones incluyen resultados por partido, asignación de escaños mediante el método D'Hondt
+    (asambleístas territoriales, poblacionales e indígenas — NPIOC), composición de la Asamblea Legislativa Departamental,
+    participación ciudadana y análisis de voto cruzado, calculados según la <strong>Ley 1700</strong> y los estatutos autonómicos vigentes.
+    Para los cinco departamentos con segunda vuelta se añaden dashboards dedicados con análisis de transferencia de votos por recinto,
+    correlaciones entre partidos y polarización territorial (ICB, Gini del margen).
+    Los dashboards municipales cubren los resultados de alcaldes y concejos en los nueve departamentos del país.</p>
   </div>
 
   <!-- GOBERNACIONES -->
@@ -313,8 +320,30 @@ footer strong{color:rgba(255,255,255,.7)}
 </div>
 
 <footer>
-  <p><strong>Centro de Estudios Populi</strong> · Carlos Aranda &amp; Sofía Wanderley<br>
-  Fuente: Tribunal Supremo Electoral Bolivia — Cómputo Oficial 2026 · Los escaños NPIOC son elegidos por normas y procedimientos propios de cada nación o pueblo indígena originario campesino.</p>
+  <div class="footer-inner">
+    <div style="flex:2;min-width:220px">
+      <div class="footer-brand">Centro de Estudios POPULI</div>
+      <div class="footer-tagline" style="margin-top:8px">
+        <span style="color:rgba(255,255,255,.75);font-weight:600">Autor:</span>
+        Carlos Augusto Aranda Herrera<br>
+        <span style="color:rgba(255,255,255,.75);font-weight:600">Colaboración y sugerencias:</span>
+        Sofía Wanderley &amp; David Durán (Politólogo)<br>
+        <span style="color:rgba(255,255,255,.4);font-size:.92em">Fuente: Tribunal Supremo Electoral Bolivia — Cómputo Oficial 2026</span>
+      </div>
+    </div>
+    <div style="flex:1;min-width:160px;border-left:1px solid rgba(255,255,255,.1);padding-left:24px">
+      <div style="font-size:.6em;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Cobertura</div>
+      <div style="font-size:.7em;color:rgba(255,255,255,.5);line-height:1.8">
+        9 Gobernaciones + ALD<br>
+        5 Segundas Vueltas<br>
+        9 Departamentos — Municipios<br>
+        Bolivia · 22 mar &amp; 27 abr 2026
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Los escaños NPIOC son elegidos por normas y procedimientos propios de cada nación o pueblo indígena originario campesino, bajo supervisión del OEP. No se asignan por sufragio universal.</p>
+  </div>
 </footer>
 
 </body>
