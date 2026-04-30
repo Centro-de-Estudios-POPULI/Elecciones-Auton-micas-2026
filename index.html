@@ -49,6 +49,10 @@ body{font-family:'Inter',system-ui,sans-serif;background:#f8f7f4;color:#374151;l
 .c-chu{background:#dc2626}.c-oru{background:#d97706}.c-pan{background:#15803d}
 .c-nac{background:linear-gradient(90deg,#d52b1e 33%,#f4c51e 33% 66%,#007934 66%)}
 
+/* SEGUNDA VUELTA */
+.c-2v{background:linear-gradient(90deg,#7c1d1d,#b91c1c)}
+.sec-2v-note{font-size:.75em;color:#6b7280;margin-bottom:20px;font-style:italic}
+
 /* FOOTER */
 footer{background:linear-gradient(135deg,#0f1523,#111d3a);border-top:3px solid #3b82f6;padding:24px 32px}
 footer p{color:rgba(255,255,255,.4);font-size:.7em;text-align:center}
@@ -74,17 +78,17 @@ footer strong{color:rgba(255,255,255,.7)}
 <div class="main">
 
   <div class="intro">
-    <p>Análisis electoral de las <strong>Elecciones Autonómicas Bolivia 2026</strong>. Cada dashboard incluye resultados por partido,
+    <p>Análisis electoral de las <strong>Elecciones Subnacionales Bolivia 2026</strong>. Cada dashboard incluye resultados por partido,
     asignación de escaños (territoriales, poblacionales e indígenas), participación ciudadana y análisis de voto cruzado,
     calculados según la <strong>Ley 1700</strong> y los estatutos autonómicos departamentales vigentes.
-    Elaborado por el <strong>Centro de Estudios de Políticas Públicas para la Libertad</strong> </p>
+    Elaborado por <strong>Carlos Aranda &amp; Sofía Wanderley</strong> — Centro de Estudios Populi.</p>
   </div>
 
   <!-- GOBERNACIONES -->
   <div class="sec-title"><span></span>Gobernaciones &amp; Asambleas Legislativas</div>
   <div class="sec-sub">Resultados Gobernador/a · Asambleísta Territorial · Asambleísta Poblacional · Composición ALD · Participación · Voto Cruzado</div>
   <div class="grid">
-    <a class="card" href="gobernaciones/dashboard_la_paz.html">
+    <a class="card" href="gobernaciones/dashboard/dashboard_la_paz.html">
       <div class="card-stripe c-lap"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
@@ -93,7 +97,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="gobernaciones/dashboard_cochabamba.html">
+    <a class="card" href="gobernaciones/dashboard/dashboard_cochabamba.html">
       <div class="card-stripe c-cbba"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
@@ -102,7 +106,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="gobernaciones/dashboard_santa_cruz.html">
+    <a class="card" href="gobernaciones/dashboard/dashboard_santa_cruz.html">
       <div class="card-stripe c-sc"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
@@ -111,7 +115,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="gobernaciones/dashboard_potosi.html">
+    <a class="card" href="gobernaciones/dashboard/dashboard_potosi.html">
       <div class="card-stripe c-pot"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
@@ -120,7 +124,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="gobernaciones/dashboard_beni.html">
+    <a class="card" href="gobernaciones/dashboard/dashboard_beni.html">
       <div class="card-stripe c-ben"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
@@ -129,7 +133,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="gobernaciones/dashboard_tarija.html">
+    <a class="card" href="gobernaciones/dashboard/dashboard_tarija.html">
       <div class="card-stripe c-tar"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
@@ -138,7 +142,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="gobernaciones/dashboard_chuquisaca.html">
+    <a class="card" href="gobernaciones/dashboard/dashboard_chuquisaca.html">
       <div class="card-stripe c-chu"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
@@ -147,7 +151,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="gobernaciones/dashboard_oruro.html">
+    <a class="card" href="gobernaciones/dashboard/dashboard_oruro.html">
       <div class="card-stripe c-oru"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
@@ -156,7 +160,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="gobernaciones/dashboard_pando.html">
+    <a class="card" href="gobernaciones/dashboard/dashboard_pando.html">
       <div class="card-stripe c-pan"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
@@ -167,62 +171,11 @@ footer strong{color:rgba(255,255,255,.7)}
     </a>
   </div>
 
-  <!-- SEGUNDA VUELTA -->
-  <div class="sec-title"><span></span>Segunda Vuelta — Gobernaciones</div>
-  <div class="sec-sub">Cinco departamentos con ballotage · Resultados definitivos · Gobernador/a electo/a · Participación · Análisis de transferencia de voto</div>
-  <div class="grid">
-    <a class="card" href="gobernaciones/GOB_0907_SantaCruz_2daVuelta.html">
-      <div class="card-stripe c-sc"></div>
-      <div class="card-body">
-        <div class="card-label">2da Vuelta · Gobernación</div>
-        <div class="card-name">Santa Cruz</div>
-        <div class="card-meta">LIBRE 28,6% · SPT 27,0% · 1ra vuelta</div>
-        <div class="card-arrow">Ver dashboard →</div>
-      </div>
-    </a>
-    <a class="card" href="gobernaciones/GOB_0904_Oruro_2daVuelta.html">
-      <div class="card-stripe c-oru"></div>
-      <div class="card-body">
-        <div class="card-label">2da Vuelta · Gobernación</div>
-        <div class="card-name">Oruro</div>
-        <div class="card-meta">JACHA 35,3% · PATRIA-ORURO 11,1% · 1ra vuelta</div>
-        <div class="card-arrow">Ver dashboard →</div>
-      </div>
-    </a>
-    <a class="card" href="gobernaciones/GOB_0906_Tarija_2daVuelta.html">
-      <div class="card-stripe c-tar"></div>
-      <div class="card-body">
-        <div class="card-label">2da Vuelta · Gobernación</div>
-        <div class="card-name">Tarija</div>
-        <div class="card-meta">PATRIA 35,8% · CDC 28,4% · 1ra vuelta</div>
-        <div class="card-arrow">Ver dashboard →</div>
-      </div>
-    </a>
-    <a class="card" href="gobernaciones/GOB_0908_Beni_2daVuelta.html">
-      <div class="card-stripe c-ben"></div>
-      <div class="card-body">
-        <div class="card-label">2da Vuelta · Gobernación</div>
-        <div class="card-name">Beni</div>
-        <div class="card-meta">PATRIA-UNIDOS 36,6% · MNR 20,1% · 1ra vuelta</div>
-        <div class="card-arrow">Ver dashboard →</div>
-      </div>
-    </a>
-    <a class="card" href="gobernaciones/GOB_0901_Chuquisaca_2daVuelta.html">
-      <div class="card-stripe c-chu"></div>
-      <div class="card-body">
-        <div class="card-label">2da Vuelta · Gobernación</div>
-        <div class="card-name">Chuquisaca</div>
-        <div class="card-meta">AGN 34,7% · PATRIA-UNIDOS 34,0% · 1ra vuelta</div>
-        <div class="card-arrow">Ver dashboard →</div>
-      </div>
-    </a>
-  </div>
-
   <!-- MUNICIPALES -->
   <div class="sec-title"><span></span>Elecciones Municipales</div>
   <div class="sec-sub">Resultados Alcalde/sa · Concejos Municipales · Participación · Scatter representación</div>
   <div class="grid">
-    <a class="card" href="municipales/dashboard_nacional.html">
+    <a class="card" href="dashboard/municipales/dashboard_nacional.html">
       <div class="card-stripe c-nac"></div>
       <div class="card-body">
         <div class="card-label">Resumen nacional</div>
@@ -231,7 +184,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="municipales/dashboard_la_paz.html">
+    <a class="card" href="dashboard/municipales/dashboard_la_paz.html">
       <div class="card-stripe c-lap"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
@@ -239,7 +192,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="municipales/dashboard_cochabamba.html">
+    <a class="card" href="dashboard/municipales/dashboard_cochabamba.html">
       <div class="card-stripe c-cbba"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
@@ -247,7 +200,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="municipales/dashboard_santa_cruz.html">
+    <a class="card" href="dashboard/municipales/dashboard_santa_cruz.html">
       <div class="card-stripe c-sc"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
@@ -255,7 +208,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="municipales/dashboard_potosi.html">
+    <a class="card" href="dashboard/municipales/dashboard_potosi.html">
       <div class="card-stripe c-pot"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
@@ -263,7 +216,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="municipales/dashboard_beni.html">
+    <a class="card" href="dashboard/municipales/dashboard_beni.html">
       <div class="card-stripe c-ben"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
@@ -271,7 +224,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="municipales/dashboard_tarija.html">
+    <a class="card" href="dashboard/municipales/dashboard_tarija.html">
       <div class="card-stripe c-tar"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
@@ -279,7 +232,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="municipales/dashboard_chuquisaca.html">
+    <a class="card" href="dashboard/municipales/dashboard_chuquisaca.html">
       <div class="card-stripe c-chu"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
@@ -287,7 +240,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="municipales/dashboard_oruro.html">
+    <a class="card" href="dashboard/municipales/dashboard_oruro.html">
       <div class="card-stripe c-oru"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
@@ -295,7 +248,7 @@ footer strong{color:rgba(255,255,255,.7)}
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
-    <a class="card" href="municipales/dashboard_pando.html">
+    <a class="card" href="dashboard/municipales/dashboard_pando.html">
       <div class="card-stripe c-pan"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
@@ -305,10 +258,62 @@ footer strong{color:rgba(255,255,255,.7)}
     </a>
   </div>
 
+  <!-- SEGUNDA VUELTA -->
+  <div class="sec-title"><span></span>Segunda Vuelta — Gobernaciones</div>
+  <div class="sec-sub">Análisis comparativo 1ra vs 2da vuelta · Transferencia de votos por recinto · Correlaciones · Polarización territorial</div>
+  <div class="sec-2v-note">27 de abril de 2026 — Cinco departamentos con segunda vuelta: Chuquisaca, Oruro, Tarija, Santa Cruz y Beni.</div>
+  <div class="grid">
+    <a class="card" href="segunda_vuelta/GOB_0902_Chuquisaca_2daVuelta.html">
+      <div class="card-stripe c-chu"></div>
+      <div class="card-body">
+        <div class="card-label">Segunda Vuelta</div>
+        <div class="card-name">Chuquisaca</div>
+        <div class="card-meta">AGN 53.1% · 10 provincias · 169 recintos</div>
+        <div class="card-arrow">Ver análisis →</div>
+      </div>
+    </a>
+    <a class="card" href="segunda_vuelta/GOB_0904_Oruro_2daVuelta.html">
+      <div class="card-stripe c-oru"></div>
+      <div class="card-body">
+        <div class="card-label">Segunda Vuelta</div>
+        <div class="card-name">Oruro</div>
+        <div class="card-meta">JACHAJAKISASOLFESORC 52.9% · 16 provincias · 193 recintos</div>
+        <div class="card-arrow">Ver análisis →</div>
+      </div>
+    </a>
+    <a class="card" href="segunda_vuelta/GOB_0906_Tarija_2daVuelta.html">
+      <div class="card-stripe c-tar"></div>
+      <div class="card-body">
+        <div class="card-label">Segunda Vuelta</div>
+        <div class="card-name">Tarija</div>
+        <div class="card-meta">CDC 70.8% · 6 provincias · 148 recintos</div>
+        <div class="card-arrow">Ver análisis →</div>
+      </div>
+    </a>
+    <a class="card" href="segunda_vuelta/GOB_0907_SantaCruz_2daVuelta.html">
+      <div class="card-stripe c-sc"></div>
+      <div class="card-body">
+        <div class="card-label">Segunda Vuelta</div>
+        <div class="card-name">Santa Cruz</div>
+        <div class="card-meta">LIBRE 57.0% · 15 provincias · 890 recintos</div>
+        <div class="card-arrow">Ver análisis →</div>
+      </div>
+    </a>
+    <a class="card" href="segunda_vuelta/GOB_0908_Beni_2daVuelta.html">
+      <div class="card-stripe c-ben"></div>
+      <div class="card-body">
+        <div class="card-label">Segunda Vuelta</div>
+        <div class="card-name">Beni</div>
+        <div class="card-meta">PATRIA-UNIDOS 53.0% · 8 provincias · 101 recintos</div>
+        <div class="card-arrow">Ver análisis →</div>
+      </div>
+    </a>
+  </div>
+
 </div>
 
 <footer>
-  <p><strong>Centro de Estudios Populi</strong> · Carlos Aranda; Sofía Wanderley &amp Joaquina Vargas<br>
+  <p><strong>Centro de Estudios Populi</strong> · Carlos Aranda &amp; Sofía Wanderley<br>
   Fuente: Tribunal Supremo Electoral Bolivia — Cómputo Oficial 2026 · Los escaños NPIOC son elegidos por normas y procedimientos propios de cada nación o pueblo indígena originario campesino.</p>
 </footer>
 
