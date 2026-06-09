@@ -1,0 +1,21 @@
+# Datos fuente (pesados, no van al repo de pages)
+datos/
+gobernaciones/datos/
+dashboard/datos/
+
+# Templates (solo los dashboards finales van)
+gobernaciones/dashboard/template_*.html
+dashboard/template_*.html
+
+# Scripts Python
+scripts/
+gobernaciones/scripts/
+
+# Archivos temporales
+__pycache__/
+*.py[cod]
+*.xlsx
+*.pdf
+*.log
+.DS_Store
+Thumbs.db
