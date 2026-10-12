@@ -230,7 +230,8 @@ select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(3
   .panel{padding:14px 12px}
   select{min-width:0;width:100%}
   table{font-size:.68em}
-  #floatBar{height:auto;min-height:44px;padding:4px 0;overflow-x:auto;justify-content:flex-start}
+  #floatBar{height:44px;padding:0;overflow-x:auto;justify-content:flex-start;flex-wrap:nowrap;scrollbar-width:none}
+  #floatBar::-webkit-scrollbar{display:none}
   .fb-item{padding:0 12px;flex-shrink:0}
 }
 @media print{
@@ -289,7 +290,7 @@ tr:hover .tbl-sticky td:first-child{background:#f0f6ff}
   .wc-stat{padding:9px 12px;min-width:76px;flex-shrink:0}
   .wc-stat-n{font-size:1.15em}
   /* KPI grid compacto */
-  .stat-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,1fr));gap:6px}
+  .stat-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:6px}
   .stat{min-width:0;padding:8px 5px}
   .stat-n{font-size:.98em;letter-spacing:-.2px;white-space:nowrap}
   .stat-l{font-size:.48em;letter-spacing:.3px}

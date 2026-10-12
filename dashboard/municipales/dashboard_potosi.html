@@ -456,6 +456,7 @@ select:focus{border-color:#001219;box-shadow:0 0 0 3px rgba(0,18,25,.08)}
 .lectura strong{color:#001219}
 .fuente-nota{font-size:.68em;color:#5C6B70;margin-top:8px;line-height:1.5}
 .dh-table{overflow-x:auto;max-width:100%}#munDetail .card{overflow-x:auto}
+@media(max-width:700px){#floatBar{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none}#floatBar::-webkit-scrollbar{display:none}.fb-item{padding:0 14px;flex-shrink:0}.stat-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}.stat{min-width:0}.stat-n{font-size:1.08em}.stat-l{overflow-wrap:anywhere;line-height:1.25}}
 @media(max-width:600px){.vc-mesa{flex-direction:column;align-items:flex-start;gap:8px}.card{min-width:0!important;max-width:100%}.row>.card{flex-basis:100%!important}}
 @media (prefers-reduced-motion:reduce){.panel.active,.map-svg-container svg{animation:none}}
 .ai-info{-webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22/%3E%3Cpath%20d%3D%22M12%2011v6M12%207.5v.01%22/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22/%3E%3Cpath%20d%3D%22M12%2011v6M12%207.5v.01%22/%3E%3C/svg%3E") center/contain no-repeat}
@@ -842,7 +843,7 @@ function ttAlc(mun){
     s+='<span style="width:6px;height:6px;border-radius:1px;background:'+pc(p)+';display:inline-block"></span>';
     s+='<span style="color:'+(i===0?'#001219':'#33393B')+';font-weight:'+(i===0?700:400)+'">'+p+'</span></span>';
     s+='<span style="color:#33393B;font-weight:600">'+fn(v)+' <span style="color:#5C6B70">'+fp(pct)+'</span></span>';
-    s+='</div><div class="tt-bar-wrap"><div class="tt-bar" style="width:'+fd(bw)+'%;background:'+pc(p)+'"></div></div></div>';
+    s+='</div><div class="tt-bar-wrap"><div class="tt-bar" style="width:'+bw+'%;background:'+pc(p)+'"></div></div></div>';
   });
   const c=D.concejales[mun];
   if(c){
@@ -931,7 +932,7 @@ function initAlc(){
     let _fb='';
     if(_ra[0])_fb+='<div class="fb-item"><span class="fb-dot" style="background:'+pc(_ra[0][0])+'"></span><span class="fb-n">'+_ra[0][0]+'</span><span class="fb-l">&nbsp;'+_ra[0][1].alcaldias+' alcaldías</span></div>';
     if(_re[0])_fb+='<div class="fb-item"><span class="fb-dot" style="background:'+pc(_re[0][0])+'"></span><span class="fb-n">'+_re[0][0]+'</span><span class="fb-l">&nbsp;'+_re[0][1].escanos+' escaños ('+fd(_re[0][1].pct)+'%)</span></div>';
-    _fb+='<div class="fb-item"><span class="fb-n">'+fd(_avgPar)+'%</span><span class="fb-l">&nbsp;participación promedio</span></div>';
+    _fb+='<div class="fb-item"><span class="fb-n">'+_avgPar+'%</span><span class="fb-l">&nbsp;participación promedio</span></div>';
     _fb+='<div class="fb-item"><span class="fb-n" style="color:#C71E1D">'+_sinMay+'</span><span class="fb-l">&nbsp;municipios sin mayoría</span></div>';
     const _el=document.getElementById('floatBar');if(_el)_el.innerHTML=_fb;
   }catch(e){console.warn('floatBar',e)}
@@ -996,13 +997,13 @@ function initResumen(){
   const tb1=document.querySelector('#tblAlcRes tbody');
   Object.entries(D.resumen_alcaldias).sort((a,b)=>b[1].alcaldias-a[1].alcaldias).forEach(([p,d])=>{
     if(!d.alcaldias)return;
-    const barW1=Math.round(d.alcaldias/9*100);tb1.innerHTML+='<tr><td style="white-space:nowrap"><span class="dot" style="background:'+pc(p)+'"></span><b>'+p+'</b></td><td class="ctr" style="font-weight:800;color:'+pcT(p)+';font-size:1.15em">'+d.alcaldias+'</td><td class="ctr"><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;height:7px;background:#E9E4DA;border-radius:4px;overflow:hidden"><div style="width:'+fd(barW1)+'%;height:100%;background:'+pc(p)+';border-radius:4px"></div></div><span style="font-size:.85em;color:#33393B;min-width:32px">'+fp(d.alcaldias/TM*100)+'</span></div></td></tr>';
+    const barW1=Math.round(d.alcaldias/9*100);tb1.innerHTML+='<tr><td style="white-space:nowrap"><span class="dot" style="background:'+pc(p)+'"></span><b>'+p+'</b></td><td class="ctr" style="font-weight:800;color:'+pcT(p)+';font-size:1.15em">'+d.alcaldias+'</td><td class="ctr"><div style="display:flex;align-items:center;gap:6px"><div style="flex:1;height:7px;background:#E9E4DA;border-radius:4px;overflow:hidden"><div style="width:'+barW1+'%;height:100%;background:'+pc(p)+';border-radius:4px"></div></div><span style="font-size:.85em;color:#33393B;min-width:32px">'+fp(d.alcaldias/TM*100)+'</span></div></td></tr>';
   });
   tb1.innerHTML+='<tr style="background:#FAF8F3"><td><b>TOTAL</b></td><td class="ctr" style="font-weight:800">'+TM+'</td><td class="ctr">100%</td></tr>';
   const tb2=document.querySelector('#tblConcRes tbody');
   const totE=Object.values(D.resumen_escanos).reduce((s,d)=>s+d.escanos,0);
   Object.entries(D.resumen_escanos).sort((a,b)=>b[1].escanos-a[1].escanos).forEach(([p,d])=>{
-    const barW2=Math.round(d.pct);tb2.innerHTML+='<tr><td style="white-space:nowrap"><span class="dot" style="background:'+pc(p)+'"></span>'+p+'</td><td class="ctr" style="font-weight:700;color:'+pcT(p)+'">'+d.escanos+'</td><td class="ctr"><div style="display:flex;align-items:center;gap:5px"><div style="flex:1;height:7px;background:#E9E4DA;border-radius:4px;overflow:hidden"><div style="width:'+fd(barW2)+'%;height:100%;background:'+pc(p)+';border-radius:4px"></div></div><span style="font-size:.85em;color:#33393B;min-width:36px">'+fp(d.pct)+'</span></div></td><td class="ctr" style="color:#5C6B70">'+d.municipios_lider+'</td><td class="ctr" style="color:#5C6B70">'+d.municipios_rep+'</td></tr>';
+    const barW2=Math.round(d.pct);tb2.innerHTML+='<tr><td style="white-space:nowrap"><span class="dot" style="background:'+pc(p)+'"></span>'+p+'</td><td class="ctr" style="font-weight:700;color:'+pcT(p)+'">'+d.escanos+'</td><td class="ctr"><div style="display:flex;align-items:center;gap:5px"><div style="flex:1;height:7px;background:#E9E4DA;border-radius:4px;overflow:hidden"><div style="width:'+barW2+'%;height:100%;background:'+pc(p)+';border-radius:4px"></div></div><span style="font-size:.85em;color:#33393B;min-width:36px">'+fp(d.pct)+'</span></div></td><td class="ctr" style="color:#5C6B70">'+d.municipios_lider+'</td><td class="ctr" style="color:#5C6B70">'+d.municipios_rep+'</td></tr>';
   });
   tb2.innerHTML+='<tr style="background:#FAF8F3"><td><b>TOTAL</b></td><td class="ctr" style="font-weight:800">'+totE+'</td><td class="ctr">100%</td><td></td><td></td></tr>';
   const tb3=document.querySelector('#tblNiveles tbody');
@@ -1148,13 +1149,13 @@ function renderVCD(mun){
       const wa=Math.round((row.pct_alc||0)/maxP*100);const wc=Math.round((row.pct_con||0)/maxP*100);
       const dc=row.diff_pp>5?'#0A7C7E':row.diff_pp<-5?'#C71E1D':'#33393B';
       s+='<div class="vc-row"><div class="vc-label"><span style="display:flex;align-items:center;gap:4px"><span class="dot" style="background:'+col+'"></span><span style="color:#001219;font-weight:600">'+p+'</span></span><span style="display:flex;gap:10px"><span style="color:#5C6B70">'+fn(row.votos_alc)+'→'+fn(row.votos_con)+'</span><span style="color:'+dc+';font-weight:700">'+(row.diff_pp>0?'+':'')+fd(row.diff_pp)+' pp</span></span></div>';
-      s+='<div class="vc-bar-track"><div class="vc-bar-fill" style="width:'+fd(wa)+'%;background:'+col+';opacity:.9"></div></div>';
-      s+='<div class="vc-bar-track" style="margin-top:2px"><div class="vc-bar-fill" style="width:'+fd(wc)+'%;background:'+col+';opacity:.38"></div></div>';
+      s+='<div class="vc-bar-track"><div class="vc-bar-fill" style="width:'+wa+'%;background:'+col+';opacity:.9"></div></div>';
+      s+='<div class="vc-bar-track" style="margin-top:2px"><div class="vc-bar-fill" style="width:'+wc+'%;background:'+col+';opacity:.38"></div></div>';
       s+='<div style="display:flex;justify-content:space-between;font-size:.65em;color:#5C6B70;margin-top:2px"><span>A: '+fp(row.pct_alc)+'</span><span>C: '+fp(row.pct_con)+'</span></div></div>';
     } else {
       const pct=row.pct_alc||row.pct_con||0;const bw=Math.round(pct/maxP*100);
       const lbl=row.estado==='solo_alcalde'?'Sin lista concejal':'Sin candidato alcalde';
-      s+='<div class="vc-row" style="opacity:.5"><div class="vc-label"><span style="display:flex;align-items:center;gap:4px"><span class="dot" style="background:'+col+'"></span><span style="color:#33393B">'+p+'</span></span><span style="color:#8A9699;font-style:italic;font-size:.9em">'+lbl+'</span></div><div class="vc-bar-track"><div class="vc-bar-fill" style="width:'+fd(bw)+'%;background:'+col+';opacity:.6"></div></div><div style="font-size:.64em;color:#5C6B70;margin-top:2px">'+fp(pct)+' · '+fn(row.votos_alc||row.votos_con||0)+' v</div></div>';
+      s+='<div class="vc-row" style="opacity:.5"><div class="vc-label"><span style="display:flex;align-items:center;gap:4px"><span class="dot" style="background:'+col+'"></span><span style="color:#33393B">'+p+'</span></span><span style="color:#8A9699;font-style:italic;font-size:.9em">'+lbl+'</span></div><div class="vc-bar-track"><div class="vc-bar-fill" style="width:'+bw+'%;background:'+col+';opacity:.6"></div></div><div style="font-size:.64em;color:#5C6B70;margin-top:2px">'+fp(pct)+' · '+fn(row.votos_alc||row.votos_con||0)+' v</div></div>';
     }
   });
   document.getElementById('vcDetalle').innerHTML=s;
@@ -1198,7 +1199,7 @@ function initLegit(){
   const tb=document.querySelector('#tblLeg tbody');
   Object.entries(L).sort((a,b)=>b[1].participacion-a[1].participacion).forEach(([mun,l])=>{
     const vW=r1(l.pct_validos*l.participacion/100);const bW=r1(l.pct_blancos*l.participacion/100);const nW=r1(l.pct_nulos*l.participacion/100);
-    tb.innerHTML+='<tr><td style="white-space:nowrap">'+mun+'</td><td class="num">'+fn(l.inscritos)+'</td><td class="num">'+fn(l.emitidos)+'</td><td class="ctr" style="font-weight:700;color:#005F73">'+fd(l.participacion)+'%</td><td class="ctr" style="color:#5C6B70">'+fd(l.ausentismo)+'%</td><td class="ctr" style="color:#0A7C7E">'+fd(l.pct_validos)+'%</td><td class="ctr" style="color:#A86E00">'+fd(l.pct_blancos)+'%</td><td class="ctr" style="color:#C71E1D">'+fd(l.pct_nulos)+'%</td><td style="min-width:90px;padding:4px 9px"><div style="height:9px;background:#E9E4DA;border-radius:3px;overflow:hidden;position:relative"><div style="position:absolute;left:0;top:0;height:100%;width:'+fd(vW)+'%;background:#0A9396;opacity:.7"></div><div style="position:absolute;left:'+fd(vW)+'%;top:0;height:100%;width:'+fd(bW)+'%;background:#EE9B00;opacity:.7"></div><div style="position:absolute;left:'+(vW+bW)+'%;top:0;height:100%;width:'+fd(nW)+'%;background:#C71E1D;opacity:.7"></div></div></td></tr>';
+    tb.innerHTML+='<tr><td style="white-space:nowrap">'+mun+'</td><td class="num">'+fn(l.inscritos)+'</td><td class="num">'+fn(l.emitidos)+'</td><td class="ctr" style="font-weight:700;color:#005F73">'+fd(l.participacion)+'%</td><td class="ctr" style="color:#5C6B70">'+fd(l.ausentismo)+'%</td><td class="ctr" style="color:#0A7C7E">'+fd(l.pct_validos)+'%</td><td class="ctr" style="color:#A86E00">'+fd(l.pct_blancos)+'%</td><td class="ctr" style="color:#C71E1D">'+fd(l.pct_nulos)+'%</td><td style="min-width:90px;padding:4px 9px"><div style="height:9px;background:#E9E4DA;border-radius:3px;overflow:hidden;position:relative"><div style="position:absolute;left:0;top:0;height:100%;width:'+vW+'%;background:#0A9396;opacity:.7"></div><div style="position:absolute;left:'+vW+'%;top:0;height:100%;width:'+bW+'%;background:#EE9B00;opacity:.7"></div><div style="position:absolute;left:'+(vW+bW)+'%;top:0;height:100%;width:'+nW+'%;background:#C71E1D;opacity:.7"></div></div></td></tr>';
   });
   tb.innerHTML+='<tr style="background:#FAF8F3"><td><b>TOTAL</b></td><td class="num"><b>'+fn(T.inscritos)+'</b></td><td class="num"><b>'+fn(T.emitidos)+'</b></td><td class="ctr" style="font-weight:800;color:#005F73">'+fd(T.participacion)+'%</td><td class="ctr">'+fd(T.ausentismo)+'%</td><td class="ctr" style="color:#0A7C7E">'+fd(T.pct_validos)+'%</td><td class="ctr" style="color:#A86E00">'+fd(T.pct_blancos)+'%</td><td class="ctr" style="color:#C71E1D">'+fd(T.pct_nulos)+'%</td><td></td></tr>';
   const MCOL={amplio:'#0A7C7E',moderado:'#A86E00',acotado:'#C71E1D'};   // texto legible sobre blanco
