@@ -3,9 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Elecciones Autonómicas Bolivia 2026 — Centro de Estudios Populi</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<title>Elecciones Autonómicas Bolivia 2026 — Centro de Estudios POPULI</title>
+<meta name="description" content="Resultados oficiales de las 9 gobernaciones, 335 alcaldías y 2.049 concejales: mapas, escaños, voto cruzado, segundas vueltas y a dónde fueron los votos. Centro de Estudios POPULI.">
+<link rel="canonical" href="https://centro-de-estudios-populi.github.io/Elecciones-Auton-micas-2026/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Centro de Estudios POPULI">
+<meta property="og:locale" content="es_BO">
+<meta property="og:title" content="Elecciones Autonómicas Bolivia 2026">
+<meta property="og:description" content="Resultados oficiales de las 9 gobernaciones, 335 alcaldías y 2.049 concejales: mapas, escaños, voto cruzado, segundas vueltas y a dónde fueron los votos. Centro de Estudios POPULI.">
+<meta property="og:url" content="https://centro-de-estudios-populi.github.io/Elecciones-Auton-micas-2026/">
+<meta property="og:image" content="https://centro-de-estudios-populi.github.io/Elecciones-Auton-micas-2026/assets/og/portal.png?v=2026-10">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Elecciones Autonómicas Bolivia 2026">
+<meta name="twitter:description" content="Resultados oficiales de las 9 gobernaciones, 335 alcaldías y 2.049 concejales: mapas, escaños, voto cruzado, segundas vueltas y a dónde fueron los votos. Centro de Estudios POPULI.">
+<meta name="twitter:image" content="https://centro-de-estudios-populi.github.io/Elecciones-Auton-micas-2026/assets/og/portal.png?v=2026-10">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--accent:#1d4ed8;--accent2:#2563eb}
@@ -67,6 +83,30 @@ footer{background:linear-gradient(135deg,#0f1523,#111d3a);border-top:3px solid #
   .grid{grid-template-columns:1fr 1fr}
   .main{padding:24px 16px 40px}
 }
+
+/* ══ POPULI · capa de marca sobre el diseño original (12/10/2026) ══ */
+*,*::before,*::after{border-radius:0!important}
+:root{--accent:#C71E1D;--accent2:#9B2226}
+body{background:#FAF8F3;color:#33393B;-webkit-font-smoothing:antialiased}
+.hdr{background:linear-gradient(135deg,#001219 0%,#00232C 55%,#00323D 100%)}
+.hdr-badge{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);letter-spacing:1.8px}
+.intro{background:#F5EFE0;border:0;border-left:3px solid #C71E1D;box-shadow:none}
+.intro p{color:#33393B}
+.intro strong{color:#001219}
+.sec-title{color:#001219}
+.sec-title span{background:#C71E1D}
+.sec-sub,.sec-2v-note{color:#5C6B70}
+.card{border-color:#E2DDD3;box-shadow:0 1px 2px rgba(0,18,25,.05)}
+.card:hover{box-shadow:0 12px 30px -18px rgba(0,18,25,.4);transform:translateY(-2px)}
+.card-label{color:#8A9699}
+.card-name{color:#001219;font-family:'Playfair Display',Georgia,serif;font-size:1.08em}
+.card-meta{color:#5C6B70;line-height:1.55}
+.card-meta b{color:#001219;font-weight:700}
+.card-meta .cifra{font-family:'JetBrains Mono',ui-monospace,monospace;letter-spacing:-.02em}
+.card-arrow{color:#C71E1D}
+footer{background:#001219;border-top:3px solid #C71E1D}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
 </style>
 </head>
 <body>
@@ -74,7 +114,7 @@ footer{background:linear-gradient(135deg,#0f1523,#111d3a);border-top:3px solid #
 <div class="hdr">
   <div class="hdr-inner">
     <div class="hdr-badge">Resultados Oficiales</div>
-    <h1>🗳️ Elecciones Autonómicas Bolivia 2026</h1>
+    <h1>Elecciones Autonómicas Bolivia 2026</h1>
     <div class="hdr-sub">Gobernaciones · Asambleas Legislativas Departamentales · Municipios &nbsp;·&nbsp; 22 de marzo de 2026<br>Fuente: Tribunal Supremo Electoral — Cómputo Oficial 2026</div>
   </div>
 </div>
@@ -96,83 +136,83 @@ footer{background:linear-gradient(135deg,#0f1523,#111d3a);border-top:3px solid #
   <div class="sec-sub">Resultados Gobernador/a · Asambleísta Territorial · Asambleísta Poblacional · Composición ALD · Participación · Voto Cruzado</div>
   <div class="grid">
     <a class="card" href="gobernaciones/dashboard/dashboard_la_paz.html">
-      <div class="card-stripe c-lap"></div>
+      <div class="card-stripe" style="background:#D9AF1D"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
         <div class="card-name">La Paz</div>
-        <div class="card-meta">45 escaños ALD · 20 provincias</div>
+        <div class="card-meta"><b>PATRIA-SOL</b> <span class="cifra">20,0 %</span> proclamado sin 2da vuelta<br>45 escaños ALD · 20 provincias</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="gobernaciones/dashboard/dashboard_cochabamba.html">
-      <div class="card-stripe c-cbba"></div>
+      <div class="card-stripe" style="background:#B6991B"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
         <div class="card-name">Cochabamba</div>
-        <div class="card-meta">34 escaños ALD · 16 provincias</div>
+        <div class="card-meta"><b>A-UPP</b> <span class="cifra">40,4 %</span> en 1ra vuelta<br>34 escaños ALD · 16 provincias</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="gobernaciones/dashboard/dashboard_santa_cruz.html">
-      <div class="card-stripe c-sc"></div>
+      <div class="card-stripe" style="background:#3C498B"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
         <div class="card-name">Santa Cruz</div>
-        <div class="card-meta">Estatuto Autonómico · 15 provincias</div>
+        <div class="card-meta"><b>LIBRE</b> <span class="cifra">57,0 %</span> en 2da vuelta<br>28 escaños ALD · 15 provincias</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="gobernaciones/dashboard/dashboard_potosi.html">
-      <div class="card-stripe c-pot"></div>
+      <div class="card-stripe" style="background:#027335"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
         <div class="card-name">Potosí</div>
-        <div class="card-meta">33 escaños ALD · 16 provincias</div>
+        <div class="card-meta"><b>A.S.</b> <span class="cifra">42,1 %</span> en 1ra vuelta<br>33 escaños ALD · 16 provincias</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="gobernaciones/dashboard/dashboard_beni.html">
-      <div class="card-stripe c-ben"></div>
+      <div class="card-stripe" style="background:#EA520F"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
         <div class="card-name">Beni</div>
-        <div class="card-meta">Régimen especial · 8 provincias</div>
+        <div class="card-meta"><b>PATRIA-UNIDOS</b> <span class="cifra">53,0 %</span> en 2da vuelta<br>28 escaños ALD · 8 provincias</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="gobernaciones/dashboard/dashboard_tarija.html">
-      <div class="card-stripe c-tar"></div>
+      <div class="card-stripe" style="background:#E4272B"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
         <div class="card-name">Tarija</div>
-        <div class="card-meta">30 escaños ALD · 6 provincias</div>
+        <div class="card-meta"><b>CDC</b> <span class="cifra">70,8 %</span> en 2da vuelta<br>30 escaños ALD · 6 provincias</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="gobernaciones/dashboard/dashboard_chuquisaca.html">
-      <div class="card-stripe c-chu"></div>
+      <div class="card-stripe" style="background:#00A8CD"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
         <div class="card-name">Chuquisaca</div>
-        <div class="card-meta">25 escaños ALD · 10 provincias</div>
+        <div class="card-meta"><b>AGN</b> <span class="cifra">53,1 %</span> en 2da vuelta<br>25 escaños ALD · 10 provincias</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="gobernaciones/dashboard/dashboard_oruro.html">
-      <div class="card-stripe c-oru"></div>
+      <div class="card-stripe" style="background:#BC1E29"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
         <div class="card-name">Oruro</div>
-        <div class="card-meta">33 escaños ALD · 16 provincias</div>
+        <div class="card-meta"><b>JACHAJAKISASOLFESORC</b> <span class="cifra">52,9 %</span> en 2da vuelta<br>33 escaños ALD · 16 provincias</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="gobernaciones/dashboard/dashboard_pando.html">
-      <div class="card-stripe c-pan"></div>
+      <div class="card-stripe" style="background:#C42B37"></div>
       <div class="card-body">
         <div class="card-label">Gobernación</div>
         <div class="card-name">Pando</div>
-        <div class="card-meta">Estatuto Autonómico · 5 provincias</div>
+        <div class="card-meta"><b>LIBRE-PANDO</b> <span class="cifra">46,9 %</span> en 1ra vuelta<br>21 escaños ALD · 5 provincias</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
@@ -183,83 +223,92 @@ footer{background:linear-gradient(135deg,#0f1523,#111d3a);border-top:3px solid #
   <div class="sec-sub">Resultados Alcalde/sa · Concejos Municipales · Participación · Scatter representación</div>
   <div class="grid">
     <a class="card" href="dashboard/municipales/dashboard_nacional.html">
-      <div class="card-stripe c-nac"></div>
+      <div class="card-stripe" style="background:linear-gradient(90deg,#d52b1e 33%,#f4c51e 33% 66%,#007934 66%)"></div>
       <div class="card-body">
         <div class="card-label">Resumen nacional</div>
         <div class="card-name">Bolivia — Nacional</div>
-        <div class="card-meta">Todos los municipios</div>
+        <div class="card-meta"><span class="cifra">335</span> municipios · <span class="cifra">2.049</span> concejales</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="dashboard/municipales/dashboard_la_paz.html">
-      <div class="card-stripe c-lap"></div>
+      <div class="card-stripe" style="background:#E40002"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
         <div class="card-name">La Paz</div>
+        <div class="card-meta"><span class="cifra">87</span> municipios · <span class="cifra">521</span> concejales<br>Más alcaldías: <b>UPC</b> (16)</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="dashboard/municipales/dashboard_cochabamba.html">
-      <div class="card-stripe c-cbba"></div>
+      <div class="card-stripe" style="background:#63B0E9"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
         <div class="card-name">Cochabamba</div>
+        <div class="card-meta"><span class="cifra">47</span> municipios · <span class="cifra">307</span> concejales<br>Más alcaldías: <b>SOLUCIONES-CON-TODOS</b> (11)</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="dashboard/municipales/dashboard_santa_cruz.html">
-      <div class="card-stripe c-sc"></div>
+      <div class="card-stripe" style="background:#F08D15"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
         <div class="card-name">Santa Cruz</div>
+        <div class="card-meta"><span class="cifra">54</span> municipios · <span class="cifra">360</span> concejales<br>Más alcaldías: <b>PATRIA</b> (9)</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="dashboard/municipales/dashboard_potosi.html">
-      <div class="card-stripe c-pot"></div>
+      <div class="card-stripe" style="background:#027335"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
         <div class="card-name">Potosí</div>
+        <div class="card-meta"><span class="cifra">41</span> municipios · <span class="cifra">243</span> concejales<br>Más alcaldías: <b>A.S.</b> (14)</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="dashboard/municipales/dashboard_beni.html">
-      <div class="card-stripe c-ben"></div>
+      <div class="card-stripe" style="background:#F08D15"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
         <div class="card-name">Beni</div>
+        <div class="card-meta"><span class="cifra">19</span> municipios · <span class="cifra">119</span> concejales<br>Más alcaldías: <b>PATRIA</b> (6)</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="dashboard/municipales/dashboard_tarija.html">
-      <div class="card-stripe c-tar"></div>
+      <div class="card-stripe" style="background:#E4272B"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
         <div class="card-name">Tarija</div>
+        <div class="card-meta"><span class="cifra">11</span> municipios · <span class="cifra">81</span> concejales<br>Más alcaldías: <b>CDC</b> (4)</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="dashboard/municipales/dashboard_chuquisaca.html">
-      <div class="card-stripe c-chu"></div>
+      <div class="card-stripe" style="background:#00A8CD"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
         <div class="card-name">Chuquisaca</div>
+        <div class="card-meta"><span class="cifra">28</span> municipios · <span class="cifra">154</span> concejales<br>Más alcaldías: <b>AGN</b> (13)</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="dashboard/municipales/dashboard_oruro.html">
-      <div class="card-stripe c-oru"></div>
+      <div class="card-stripe" style="background:#BC1E29"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
         <div class="card-name">Oruro</div>
+        <div class="card-meta"><span class="cifra">33</span> municipios · <span class="cifra">183</span> concejales<br>Más alcaldías: <b>JACHAJAKISASOLFESORC</b> (8)</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
     <a class="card" href="dashboard/municipales/dashboard_pando.html">
-      <div class="card-stripe c-pan"></div>
+      <div class="card-stripe" style="background:#3C498B"></div>
       <div class="card-body">
         <div class="card-label">Municipios</div>
         <div class="card-name">Pando</div>
+        <div class="card-meta"><span class="cifra">15</span> municipios · <span class="cifra">81</span> concejales<br>Más alcaldías: <b>LIBRE</b> (5)</div>
         <div class="card-arrow">Ver dashboard →</div>
       </div>
     </a>
@@ -268,50 +317,50 @@ footer{background:linear-gradient(135deg,#0f1523,#111d3a);border-top:3px solid #
   <!-- SEGUNDA VUELTA -->
   <div class="sec-title"><span></span>Segunda Vuelta — Gobernaciones</div>
   <div class="sec-sub">Análisis comparativo 1ra vs 2da vuelta · Transferencia de votos por recinto · Correlaciones · Polarización territorial</div>
-  <div class="sec-2v-note">27 de abril de 2026 — Cinco departamentos con segunda vuelta: Chuquisaca, Oruro, Tarija, Santa Cruz y Beni.</div>
+  <div class="sec-2v-note">19 de abril de 2026 — Cinco departamentos con segunda vuelta: Chuquisaca, Oruro, Tarija, Santa Cruz y Beni.</div>
   <div class="grid">
     <a class="card" href="segunda_vuelta/GOB_0902_Chuquisaca_2daVuelta.html">
-      <div class="card-stripe c-chu"></div>
+      <div class="card-stripe" style="background:#00A8CD"></div>
       <div class="card-body">
         <div class="card-label">Segunda Vuelta</div>
         <div class="card-name">Chuquisaca</div>
-        <div class="card-meta">AGN 53.1% · 10 provincias · 169 recintos</div>
+        <div class="card-meta"><b>AGN</b> <span class="cifra">53,1 %</span><br>10 provincias · <span class="cifra">169</span> recintos</div>
         <div class="card-arrow">Ver análisis →</div>
       </div>
     </a>
     <a class="card" href="segunda_vuelta/GOB_0904_Oruro_2daVuelta.html">
-      <div class="card-stripe c-oru"></div>
+      <div class="card-stripe" style="background:#BC1E29"></div>
       <div class="card-body">
         <div class="card-label">Segunda Vuelta</div>
         <div class="card-name">Oruro</div>
-        <div class="card-meta">JACHAJAKISASOLFESORC 52.9% · 16 provincias · 193 recintos</div>
+        <div class="card-meta"><b>JACHAJAKISASOLFESORC</b> <span class="cifra">52,9 %</span><br>16 provincias · <span class="cifra">193</span> recintos</div>
         <div class="card-arrow">Ver análisis →</div>
       </div>
     </a>
     <a class="card" href="segunda_vuelta/GOB_0906_Tarija_2daVuelta.html">
-      <div class="card-stripe c-tar"></div>
+      <div class="card-stripe" style="background:#E4272B"></div>
       <div class="card-body">
         <div class="card-label">Segunda Vuelta</div>
         <div class="card-name">Tarija</div>
-        <div class="card-meta">CDC 70.8% · 6 provincias · 148 recintos</div>
+        <div class="card-meta"><b>CDC</b> <span class="cifra">70,8 %</span><br>6 provincias · <span class="cifra">148</span> recintos</div>
         <div class="card-arrow">Ver análisis →</div>
       </div>
     </a>
     <a class="card" href="segunda_vuelta/GOB_0907_SantaCruz_2daVuelta.html">
-      <div class="card-stripe c-sc"></div>
+      <div class="card-stripe" style="background:#3C498B"></div>
       <div class="card-body">
         <div class="card-label">Segunda Vuelta</div>
         <div class="card-name">Santa Cruz</div>
-        <div class="card-meta">LIBRE 57.0% · 15 provincias · 890 recintos</div>
+        <div class="card-meta"><b>LIBRE</b> <span class="cifra">57,0 %</span><br>15 provincias · <span class="cifra">890</span> recintos</div>
         <div class="card-arrow">Ver análisis →</div>
       </div>
     </a>
     <a class="card" href="segunda_vuelta/GOB_0908_Beni_2daVuelta.html">
-      <div class="card-stripe c-ben"></div>
+      <div class="card-stripe" style="background:#EA520F"></div>
       <div class="card-body">
         <div class="card-label">Segunda Vuelta</div>
         <div class="card-name">Beni</div>
-        <div class="card-meta">PATRIA-UNIDOS 53.0% · 8 provincias · 101 recintos</div>
+        <div class="card-meta"><b>PATRIA-UNIDOS</b> <span class="cifra">53,0 %</span><br>8 provincias · <span class="cifra">101</span> recintos</div>
         <div class="card-arrow">Ver análisis →</div>
       </div>
     </a>
@@ -327,7 +376,7 @@ footer{background:linear-gradient(135deg,#0f1523,#111d3a);border-top:3px solid #
         <span style="color:rgba(255,255,255,.75);font-weight:600">Autor:</span>
         Carlos Augusto Aranda Herrera<br>
         <span style="color:rgba(255,255,255,.75);font-weight:600">Colaboración técnica y revisión académica:</span>
-        Sofía Wanderley &amp; David Durán Ibañez<br>
+        Sofía Wanderley, Joaquina Vargas y David Durán Ibañez<br>
         <span style="color:rgba(255,255,255,.4);font-size:.92em">Fuente: Tribunal Supremo Electoral Bolivia — Cómputo Oficial 2026</span>
       </div>
     </div>
@@ -337,7 +386,7 @@ footer{background:linear-gradient(135deg,#0f1523,#111d3a);border-top:3px solid #
         9 Gobernaciones + ALD<br>
         5 Segundas Vueltas<br>
         9 Departamentos — Municipios<br>
-        Bolivia · 22 mar &amp; 27 abr 2026
+        Bolivia · 22 de marzo y 19 de abril de 2026
       </div>
     </div>
   </div>

@@ -1,21 +1,24 @@
-# Datos fuente (pesados, no van al repo de pages)
+# Datos fuente e intermedios: pesados y reproducibles con el pipeline (ver README)
 datos/
 gobernaciones/datos/
 dashboard/datos/
 
-# Templates (solo los dashboards finales van)
+# Plantillas y scripts de trabajo: quedan locales (el sitio publica sólo las páginas y assets/)
 gobernaciones/dashboard/template_*.html
 dashboard/template_*.html
-
-# Scripts Python
 scripts/
 gobernaciones/scripts/
+modelos/
 
-# Archivos temporales
+# Herramientas
+pipeline/node_modules/
 __pycache__/
 *.py[cod]
+
+# Archivos temporales
 *.xlsx
 *.pdf
 *.log
 .DS_Store
 Thumbs.db
+_v2_descartada/
